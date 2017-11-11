@@ -53,29 +53,9 @@ countZeros([0,100]) --> 3
 
 11. Implement your own version of the [eql function from chai](http://chaijs.com/api/bdd/#method_eql) which checks objects and arrays for deep equality.
 
-12. Find the most nested object or array in a nested object or array. It should return the result in an array. If there are multiple objects/arrays nested at the same depth, it should return an array of all of them.
+12. Implement a [JSON.stringify function](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 
-```js
-findMostNested({a: 'hello'}) // [{a: 'hello}]
-findMostNested({a: {b: 'hi'}, c: {d: 'bye'}, e: 1}) // [{b:'hi'}, {d: 'bye'}]
-const hell = {
-  1: {
-    2: {
-      3: {
-        4: {
-          a: 'found me!'
-        }
-      }
-    }
-  }
-}
-findMostNested(hell) // [{a: 'found me!'}]
-
-```
-
-13. Implement a [JSON.stringify function](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-
-14. Write a function `analyzeArray` that takes a string and an arbitrarily 
+13. Write a function `analyzeArray` that takes a string and an arbitrarily 
 complex nested array and console.logs the value of each array element on 
 a separate line. The value of each line should be preceded by the string 
 and numbers indicating the depth and index of the element in the array. You 
@@ -99,9 +79,29 @@ jimbo.2: turtle
 jimbo.3.0: house
 ```
 
-15. Re-implement javascript's reduce using recursion. It should take 3 arguments, with first being the array you are calling your version of reduce on. 
+14. Re-implement javascript's reduce using recursion. It should take 3 arguments, with first being the array you are calling your version of reduce on. 
 
 ### *Very* Advanced
+
+15. Find the most nested object or array in a nested object or array. It should return the result in an array. If there are multiple objects/arrays nested at the same depth, it should return an array of all of them.
+HINT: you may want to give your function more than one parameter.
+
+```js
+findMostNested({a: 'hello'}) // [{a: 'hello}]
+findMostNested({a: {b: 'hi'}, c: {d: 'bye'}, e: 1}) // [{b:'hi'}, {d: 'bye'}]
+const hell = {
+  1: {
+    2: {
+      3: {
+        4: {
+          a: 'found me!'
+        }
+      }
+    }
+  }
+}
+findMostNested(hell) // [{a: 'found me!'}]
+```
 
 16. Re-implement the browser function [getElementsByClassName](https://developer.mozilla.org/en/docs/Web/API/Document/getElementsByClassName) (rename it so it doesn't clash)
 
@@ -115,7 +115,7 @@ jimbo.3.0: house
 You may wish to read up more on [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) to understand how it works shallowly on objects and arrays.
 
 
-### Exercise 13
+### Exercise 12
 
 Just do it step by step, using TDD. Look into what constitutes acceptable [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 and start off testing the simplest JSON object you can think of and build from there.
