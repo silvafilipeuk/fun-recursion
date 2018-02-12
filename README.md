@@ -51,11 +51,9 @@ countZeros([0,100]) --> 3
 
 10. Implement your own version of the [deep-freeze function](https://www.npmjs.com/package/deep-freeze), which takes an object (or an array) and freezes it and all of its child array/objects, meaning none of them can be mutated. 
 
-11. Implement your own version of the [eql function from chai](http://chaijs.com/api/bdd/#method_eql) which checks objects and arrays for deep equality.
+11. Implement a [JSON.stringify function](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 
-12. Implement a [JSON.stringify function](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-
-13. Write a function `analyzeArray` that takes a string and an arbitrarily 
+12. Write a function `analyzeArray` that takes a string and an arbitrarily 
 complex nested array and console.logs the value of each array element on 
 a separate line. The value of each line should be preceded by the string 
 and numbers indicating the depth and index of the element in the array. You 
@@ -79,11 +77,11 @@ jimbo.2: turtle
 jimbo.3.0: house
 ```
 
-14. Re-implement javascript's reduce using recursion. It should take 3 arguments, with first being the array you are calling your version of reduce on. 
+13. Re-implement javascript's reduce using recursion. It should take 3 arguments, with first being the array you are calling your version of reduce on. 
 
 ### *Very* Advanced
 
-15. Find the most nested object or array in a nested object or array. It should return the result in an array. If there are multiple objects/arrays nested at the same depth, it should return an array of all of them.
+14. Find the most nested object or array in a nested object or array. It should return the result in an array. If there are multiple objects/arrays nested at the same depth, it should return an array of all of them.
 HINT: you may want to give your function more than one parameter.
 
 ```js
@@ -114,16 +112,14 @@ findMostNested(hell) // [{a: 'found me!'}]
 
 ### Exercise 10
 
-
 You may wish to read up more on [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) to understand how it works shallowly on objects and arrays.
 
-
-### Exercise 12
+### Exercise 11
 
 Just do it step by step, using TDD. Look into what constitutes acceptable [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 and start off testing the simplest JSON object you can think of and build from there.
 
-### Exercise 16
+### Exercise 14
 
 Look into [Document.body](https://developer.mozilla.org/en-US/docs/Web/API/Document/body),
 [Node.childNodes](https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes) (which
