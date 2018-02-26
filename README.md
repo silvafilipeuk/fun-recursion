@@ -18,7 +18,9 @@ problem in a tech interview that requires a recursive approach.
 #### (always use recursion even if the problem lends itself to a good iterative solution)
 
 1. Implement the factorial function
-2. Implement the fibonacci function (n.b. You are not expected to come up with the fibonnaci formula yourself, just to implement it in JavaScript)
+2. Implement the fibonacci function (n.b. You are not expected to come up with the fibonnaci formula yourself, just to implement it in JavaScript).  
+In this problem the fibonacci sequence is as follows: 0, 1, 1, 2, 3, 5, 8,...
+
 E.g
 ```javascript
 fib(1) --> 0
