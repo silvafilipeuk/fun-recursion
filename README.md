@@ -58,7 +58,7 @@ countZeros([0,100]) --> 3
 12. Write a function `analyzeArray` that takes a string and an arbitrarily 
 complex nested array and console.logs the value of each array element on 
 a separate line. The value of each line should be preceded by the string 
-and numbers indicating the depth and index of the element in the array. You 
+and numbers indicating the index path to each element. You 
 can assume that the array contains only strings and other nested array.
 
 e.g. 
