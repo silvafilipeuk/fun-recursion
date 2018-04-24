@@ -18,7 +18,27 @@ problem in a tech interview that requires a recursive approach.
 #### (always use recursion even if the problem lends itself to a good iterative solution)
 
 1. Implement the factorial function
-2. Implement the fibonacci function (n.b. You are not expected to come up with the fibonnaci formula yourself, just to implement it in JavaScript).  
+2. Implement a function that sums the integers 1 through n;
+3. Implement a function that counts the number of white spaces in a string
+4. Implement a function that works out whether a string is a palindrome
+5. Implement a function that sums the digits of a number until only one digit remains. 
+ E.g.
+ ```javascript
+ sumDigits(11) --> 2
+ // 1 + 1 = 2
+ sumDigits(99) --> 9 
+ // 9 + 9 = 18, 1 + 8 = 9
+ ```
+6. Implement a function that reverses a string
+7. Count the number of zeros in an array of integers
+Eg.
+```javascript
+countZeros([1]) --> 0
+countZeros([0,100]) --> 3
+```
+
+8. Find the maximum element in an array of integers
+9. Implement the fibonacci function (n.b. You are not expected to come up with the fibonnaci formula yourself, just to implement it in JavaScript).  
 In this problem the fibonacci sequence is as follows: 0, 1, 1, 2, 3, 5, 8,...
 
 E.g
@@ -27,26 +47,6 @@ fib(1) --> 0
 fib(2) --> 1
 fib(7) --> 8
 ```
-3. Implement a function that counts the number of white spaces in a string
-4. Implement a function that sums the integers 1 through n;
-5. Implement a function that works out whether a string is a palindrome
-6. Implement a function that sums the digits of a number until only one digit remains. 
- E.g.
- ```javascript
- sumDigits(11) --> 2
- // 1 + 1 = 2
- sumDigits(99) --> 9 
- // 9 + 9 = 18, 1 + 8 = 9
- ```
-7. Implement a function that reverses a string
-8. Count the number of zeros in an array of integers
-Eg.
-```javascript
-countZeros([1]) --> 0
-countZeros([0,100]) --> 3
-```
-
-9. Find the maximum element in an array of integers
 
 
 ## Advanced
