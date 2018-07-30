@@ -64,7 +64,7 @@ can assume that the array contains only strings and other nested array.
 e.g. 
 
 ```javascript
-var arr = ['carrot', ['car','boat','plane'], 'turtle', ['house']]; 
+const arr = ['carrot', ['car','boat','plane'], 'turtle', ['house']]; 
 analyzeArray('jimbo', arr);
 ```
 
