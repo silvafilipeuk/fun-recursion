@@ -14,7 +14,7 @@ problem in a tech interview that requires a recursive approach.
 2. Use the built-in debugging tools that are available to you in VS Code (breakpoints, debugger statement) to step through your code and see where it goes wrong.
 3. Continue to use TDD to make sure we are writing quality code
 
-## Core Tasks 
+## Core Tasks (AKA contrived uses of recursion!)
 #### (always use recursion even if the problem lends itself to a good iterative solution)
 
 1. Implement the factorial function
@@ -49,7 +49,7 @@ fib(7) --> 8
 ```
 
 
-## Advanced
+## Advanced (AKA proper uses of recursion)
 
 10. Implement your own version of the [deep-freeze function](https://www.npmjs.com/package/deep-freeze), which takes an object (or an array) and freezes it and all of its child array/objects, meaning none of them can be mutated. 
 
