@@ -89,7 +89,7 @@ HINT: you may want to give your function more than one parameter.
 ```js
 
 findMostNested([]) // []
-findMostNested([]) // [{}];
+findMostNested({}) // [{}];
 findMostNested({a: 'hello'}) // [{a: 'hello}]
 findMostNested({a: {b: 'hi'}, c: {d: 'bye'}, e: 1}) // [{b:'hi'}, {d: 'bye'}]
 const hell = {
