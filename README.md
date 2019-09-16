@@ -1,12 +1,8 @@
 # Recursion
 
-Recursion crops up repeatedly both in web development and in computer
-science in general. It's used to traverse more complex data structures
-such as trees. The DOM, for example, is a classic tree structure.
+Recursion crops up repeatedly both in web development and in computer science in general. It's used to traverse more complex data structures such as trees. The DOM, for example, is a classic tree structure.
 
-Often times, a recursive solution to a problem is more elegant than
-an iterative solution, and you may very well be asked to solve a
-problem in a tech interview that requires a recursive approach.
+Often times, a recursive solution to a problem is more elegant than an iterative solution, and you may very well be asked to solve a problem in a tech interview that requires a recursive approach.
 
 ## Objectives
 
@@ -74,11 +70,7 @@ countObjects({ a: { b: { c: 1 } } }); // ---> 3
 
 You may wish to read up more on [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) to understand how it works shallowly on objects and arrays.
 
-11. Write a function `analyzeArray` that takes a string and an arbitrarily
-    complex nested array and console.logs the value of each array element on
-    a separate line. The value of each line should be preceded by the string
-    and numbers indicating the index path to each element. You
-    can assume that the array contains only strings and other nested array.
+11. Write a function `analyzeArray` that takes a string and an arbitrarily complex nested array and console.logs the value of each array element on a separate line. The value of each line should be preceded by the string and numbers indicating the index path to each element. You can assume that the array contains only strings and other nested array.
 
 e.g.
 
