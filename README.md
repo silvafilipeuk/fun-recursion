@@ -153,7 +153,40 @@ finalArray = [1, 2, 3, 4]
 
 Implement the function `bubbleSort` that will sort a list of numbers using this algorithm.
 
-16. Re-implement the browser function [getElementsByClassName](https://developer.mozilla.org/en/docs/Web/API/Document/getElementsByClassName) (rename it so it doesn't clash)
+16. Write a function `boggle`. It should take a board (Array) and word (String) and determine if the word is a valid guess as per the rules of the classic board game [boggle](https://en.wikipedia.org/wiki/Boggle).
+
+For the purposes of our game the rules are as follows:
+
+- A guess will contain at least one letter.
+- A guess is valid if it can be formed by connecting adjacent characters without re-using any previously used positions.
+- Letters are counted as adjacent horizontally, vertically or diagonally.
+- The guess does not have to be an English word. Any sequence of characters will count as valid so long as it can be made from the board.
+- Boards are represented by nested arrays as below.
+
+```js
+const board = [['l', 'e', 'l'], ['p', 'h', 'l'], ['d', 'i', 'o']];
+```
+
+Valid words would include 'hello', 'hi', 'helio' or 'help'. 'plod' on the other hand would be invalid as it cannot be made from consecutive characters, despite all the letters being present.
+
+Examples:
+
+```js
+const board = [
+  ['e', 'a', 'r', 'a'],
+  ['n', 'l', 'e', 'c'],
+  ['i', 'a', 'i', 's'],
+  ['b', 'y', 'o', 'r']
+];
+
+boggle(board, 'ear'); // true
+boggle(board, 'ears'); // false
+boggle(board, 'rio'); // true
+boggle(board, 'cereal'); // false
+boggle(board, 'rscareioybailnea'); // true
+```
+
+17. Re-implement the browser function [getElementsByClassName](https://developer.mozilla.org/en/docs/Web/API/Document/getElementsByClassName) (rename it so it doesn't clash)
 
 Look into [Document.body](https://developer.mozilla.org/en-US/docs/Web/API/Document/body),
 [Node.childNodes](https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes) (which
