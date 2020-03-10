@@ -90,6 +90,8 @@ jimbo.2: turtle
 jimbo.3.0: house
 ```
 
+_Hint: Have a look at the [Testing Side Effects Notes]('/testing-side-effects.md') for some tips on how to test for the console logs_
+
 12. Implement a [JSON.stringify function](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 
 Just do it step by step, using TDD. Look into what constitutes acceptable [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
