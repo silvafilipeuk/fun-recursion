@@ -19,53 +19,56 @@ However, sometimes we have to create functions that _do_ have to cause side effe
 
 ## Using a spy to wrap an existing method
 
-There is an example of how to spy on an existing function in the [sinon documentation](https://sinonjs.org/releases/v7.5.0/spies/) under the heading "Using a spy to wrap an existing method".
+There is an example of how to spy on an existing function in the [Jest Docs](https://jestjs.io/docs/en/jest-object#jestspyonobject-methodname).
 
-> `spy(object, "method")` creates a spy that wraps the existing function: `object.method`. The spy will behave exactly like the original method (including when used as a constructor), but you will have access to data about all calls.
+> `const spy = jest.spyOn(object, "method")` creates a spy that wraps the existing function: `object.method`. The spy will behave exactly like the original method (including when used as a constructor), but you will have access to data about all calls.
 
-Below is an example of wrapping `console.log` in a spy, and checking whether it has been invoked:
+Below is an example of spying on `console.log`, and checking whether it has been invoked:
 
 ```js
-const { spy } = require('sinon');
-const { expect } = require('chai');
+// in example.test.js
+test('should log hello to the console', function () {
+  const consoleSpy = jest.spyOn(console, 'log');
 
-spy(console, 'log');
+  console.log('hello');
 
-console.log('hello');
+  expect(consoleSpy).toHaveBeenCalledTimes(1);
+  expect(consoleSpy).toHaveBeenCalledWith('hello');
 
-expect(console.log.callCount).to.equal(1);
+  consoleSpy.mockRestore();
+});
 ```
 
-## Mocha Hooks
+## Jest Lifecycle Methods
 
-Once we have set up a spy on an existing function, we will want to ensure that the `callCount` and all other properties are reset between each test. To do this, we can use [Mocha Hooks](https://mochajs.org/#hooks) to get Mocha to run functions at certain points in the testing suite. For example, Mocha will run the function passed to `beforeEach` before every subsequent `it` block.
+Once we have set up a spy on an existing function, we will want to ensure that the amount of calls and all other properties are reset between each test. To do this, we can use the [beforeEach()](https://jestjs.io/docs/en/api#beforeeachfn-timeout) and [afterEach()](https://jestjs.io/docs/en/api#aftereachfn-timeout) methods to get Jest to run functions at certain points in the testing suite. For example, Jest will run the function passed to `beforeEach` before every subsequent `test` block.
 
-In the example below, we wrap `console.log` in a spy before every `it` block, and remove it after every it block.
+In the example below, we wrap `console.log` in a spy before every `test` block, and remove it after every it block.
 
 ```js
-const { spy } = require('sinon');
-const { expect } = require('chai');
-
 describe('spying on console log', () => {
-  beforeEach(() => {
-    spy(console, 'log');
+  let consoleSpy = null; // initialise variable to be accessible from all tests - its value will be reset between tests
+
+  beforeEach(function () {
+    consoleSpy = jest.spyOn(console, 'log');
   });
 
-  afterEach(() => {
-    console.log.restore();
+  afterEach(function () {
+    consoleSpy.mockRestore();
   });
 
   it('console log has been called once', () => {
     console.log('hello');
-    expect(console.log.callCount).to.equal(1);
+    expect(consoleSpy).toHaveBeenCalledTimes(1);
+    expect(consoleSpy).toHaveBeenCalledWith('hello');
   });
 
   it('console log has not been called', () => {
-    expect(console.log.callCount).to.equal(0);
+    expect(consoleSpy).not.toHaveBeenCalled();
   });
 });
 ```
 
-Try running the example with Mocha to see the results.
+Try running the example with Jest to see the results.
 What happens when you remove the `afterEach`?
 What about the `beforeEach`?
