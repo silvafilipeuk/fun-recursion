@@ -11,7 +11,9 @@ Often times, a recursive solution to a problem is more elegant than an iterative
 
 ## Core Tasks
 
-#### (always use recursion even if the problem lends itself to a good iterative solution)
+### Part 1: Iterative Tasks
+
+**Please use recursion for the following problems even though it the task may lend itself better to standard iterative tools (e.g. a for-loop)**
 
 1. Implement the factorial function.
 2. Implement a function that sums the integers 1 through n.
@@ -21,9 +23,9 @@ Often times, a recursive solution to a problem is more elegant than an iterative
    E.g.
 
 ```javascript
-sumDigits(11) --> 2
+sumDigits(11)-- > 2;
 // 1 + 1 = 2
-sumDigits(99) --> 9
+sumDigits(99)-- > 9;
 // 9 + 9 = 18, 1 + 8 = 9
 ```
 
@@ -33,12 +35,14 @@ sumDigits(99) --> 9
 E.g
 
 ```javascript
-fib(1) --> 0
-fib(2) --> 1
-fib(7) --> 8
+fib(1)-- > 0;
+fib(2)-- > 1;
+fib(7)-- > 8;
 ```
 
 Note: fib(1) is the first number in the sequence, fib(2) the second, etc...
+
+### Part 2: Nested Structure Tasks
 
 7. Implement a function that totals an arbitrarily nested array of integers.
 
@@ -54,7 +58,7 @@ deepTotal([3, [[6]], 9) // ---> 18
 
 ```js
 deepIncludes([1, 2], 3); // ---> false
-deepIncludes(['toast', ['avocado', ['chilli flakes']]], 'avocado'); // ---> true
+deepIncludes(["toast", ["avocado", ["chilli flakes"]]], "avocado"); // ---> true
 ```
 
 9. Implement a function that counts the number of objects in an arbitrarily nested object.
@@ -64,7 +68,7 @@ countObjects({ a: 1 }); // ---> 1
 countObjects({ a: { b: { c: 1 } } }); // ---> 3
 ```
 
-## Advanced
+## Advanced Tasks
 
 10. Implement your own version of the [deep-freeze function](https://www.npmjs.com/package/deep-freeze), which takes an object (or an array) and freezes it and all of its child array/objects, meaning none of them can be mutated.
 
@@ -75,8 +79,8 @@ You may wish to read up more on [Object.freeze](https://developer.mozilla.org/en
 e.g.
 
 ```javascript
-const arr = ['carrot', ['car', 'boat', 'plane'], 'turtle', ['house']];
-analyzeArray('jimbo', arr);
+const arr = ["carrot", ["car", "boat", "plane"], "turtle", ["house"]];
+analyzeArray("jimbo", arr);
 ```
 
 should console.log:
@@ -99,7 +103,7 @@ and start off testing the simplest JSON object you can think of and build from t
 
 13. Re-implement javascript's reduce using recursion. It should take 3 arguments, with first being the array you are calling your version of reduce on.
 
-### _Very_ Advanced
+## _Very_ Advanced Tasks
 
 14. Find the most nested object or array in a nested object or array. It should return the result in an array. If there are multiple objects/arrays nested at the same depth, it should return an array of all of them.
     HINT: you may want to give your function more than one parameter.
@@ -107,18 +111,18 @@ and start off testing the simplest JSON object you can think of and build from t
 ```js
 findMostNested([]); // []
 findMostNested({}); // [{}];
-findMostNested({ a: 'hello' }); // [{a: 'hello}]
-findMostNested({ a: { b: 'hi' }, c: { d: 'bye' }, e: 1 }); // [{b:'hi'}, {d: 'bye'}]
+findMostNested({ a: "hello" }); // [{a: 'hello}]
+findMostNested({ a: { b: "hi" }, c: { d: "bye" }, e: 1 }); // [{b:'hi'}, {d: 'bye'}]
 const hell = {
   1: {
     2: {
       3: {
         4: {
-          a: 'found me!'
-        }
-      }
-    }
-  }
+          a: "found me!",
+        },
+      },
+    },
+  },
 };
 findMostNested(hell); // [{a: 'found me!'}]
 ```
@@ -158,7 +162,11 @@ For the purposes of our game the rules are as follows:
 - Boards are represented by nested arrays as below.
 
 ```js
-const board = [['l', 'e', 'l'], ['p', 'h', 'l'], ['d', 'i', 'o']];
+const board = [
+  ["l", "e", "l"],
+  ["p", "h", "l"],
+  ["d", "i", "o"],
+];
 ```
 
 Valid words would include 'hello', 'hi', 'helio' or 'help'. 'plod' on the other hand would be invalid as it cannot be made from consecutive characters, despite all the letters being present.
@@ -167,17 +175,17 @@ Examples:
 
 ```js
 const board = [
-  ['e', 'a', 'r', 'a'],
-  ['n', 'l', 'e', 'c'],
-  ['i', 'a', 'i', 's'],
-  ['b', 'y', 'o', 'r']
+  ["e", "a", "r", "a"],
+  ["n", "l", "e", "c"],
+  ["i", "a", "i", "s"],
+  ["b", "y", "o", "r"],
 ];
 
-boggle(board, 'ear'); // true
-boggle(board, 'ears'); // false
-boggle(board, 'rio'); // true
-boggle(board, 'cereal'); // false
-boggle(board, 'rscareioybailnea'); // true
+boggle(board, "ear"); // true
+boggle(board, "ears"); // false
+boggle(board, "rio"); // true
+boggle(board, "cereal"); // false
+boggle(board, "rscareioybailnea"); // true
 ```
 
 17. Re-implement the browser function [getElementsByClassName](https://developer.mozilla.org/en/docs/Web/API/Document/getElementsByClassName) (rename it so it doesn't clash)
