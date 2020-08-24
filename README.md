@@ -13,7 +13,7 @@ Often times, a recursive solution to a problem is more elegant than an iterative
 
 ### Part 1: Iterative Tasks
 
-**Please use recursion for the following problems even though it the task may lend itself better to standard iterative tools (e.g. a for-loop)**
+**Please use recursion for the following problems**
 
 1. Implement the factorial function.
 2. Implement a function that sums the integers 1 through n.
