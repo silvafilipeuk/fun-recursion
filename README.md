@@ -51,7 +51,7 @@ E.g
 ```js
 deepTotal([1, 2, 3]) // ---> 6
 deepTotal([1, [5, 10]]) // ---> 16
-deepTotal([3, [[6]], 9) // ---> 18
+deepTotal([3, [[6]], 9]) // ---> 18
 ```
 
 8. Implement a function that determines if an array includes a particular value at any level of nesting.
