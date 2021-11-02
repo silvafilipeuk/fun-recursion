@@ -16,6 +16,13 @@ Often times, a recursive solution to a problem is more elegant than an iterative
 **Please use recursion for the following problems**
 
 1. Implement the factorial function.
+```javascript
+factorial(0) // 1
+factorial(1) // 1
+factorial(2) // 2 * 1 = 2
+factorial(4) // 4 * 3 * 2 * 1 = 24
+```
+
 2. Implement a function that sums the integers 1 through n.
 3. Implement a function that reverses a string.
 4. Implement a function that counts the number of white spaces in a string.
