@@ -17,7 +17,7 @@
     "url": "https://github.com/northcoders/October-wk02-recursion/issues"
   },
   "homepage": "https://github.com/northcoders/October-wk02-recursion#readme",
-  "dependencies": {
+  "devDependencies": {
     "jest": "^29.7.0"
   }
 }
