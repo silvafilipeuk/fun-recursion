@@ -4,7 +4,7 @@ function deepIncludes(array, value)
     {
         if(Array.isArray(array[i]))
         {
-            if(deepIncludes(array[i], value) === true)
+            if(deepIncludes(array[i], value))
                 return true
         }
         else
